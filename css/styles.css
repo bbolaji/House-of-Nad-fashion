@@ -137,10 +137,21 @@ footer {
     flex-direction: row;
     align-items: center;
   }
-
+  /* Default desktop size */
+.logo {
+  height: 60px;
+  width: auto;
+}
+/* Mobile screens - adjust as needed */
+@media (max-width: 768px) {
+  .logo {
+    height: 40px; /* or smaller depending on your layout */
+  }
+}
   .product-card {
     margin-bottom: 20px;
   }
 }
+
 
 
