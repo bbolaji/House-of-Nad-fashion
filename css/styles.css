@@ -30,7 +30,12 @@ header h1 {
   font-size: 2rem;
   animation: slideIn 1s ease forwards;
 }
-
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
 /* Navigation */
 nav {
   background-color: #111;
@@ -137,4 +142,5 @@ footer {
     margin-bottom: 20px;
   }
 }
+
 
