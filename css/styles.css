@@ -129,7 +129,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
@@ -137,3 +137,4 @@ footer {
     margin-bottom: 20px;
   }
 }
+
