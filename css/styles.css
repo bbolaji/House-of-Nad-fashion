@@ -82,6 +82,20 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #800000;
 }
+.whatsapp-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    width: 40px; /* adjust size */
+    height: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+}
 
 /* Product Grid */
 .products {
@@ -162,4 +176,5 @@ footer {
     font-size: 0.9rem;
   }
 }
+
 
