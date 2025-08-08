@@ -4,37 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>House of Nad Fashion</title>
- <link rel="stylesheet" href="css/styles.css">
-<script src="js/script.js" defer></script> 
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="collections.html#Trending">Trending</a></li>
+          <li><a href="collections.html#Scarf">Scarf</a></li>
+          <li><a href="collections.html#Abaya">Abaya</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Tagline Section -->
+    <div class="tagline-container">
+      <h1 class="brand-name">House of Nad</h1>
+      <p class="tagline">Elegance Redefined</p>
     </div>
-  <nav class="navbar">
-  <div class="nav-row">
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-    <!-- Brand or (optional) left spacer -->
-    <div class="nav-brand" aria-hidden="true"></div>
-    <ul class="nav-links" id="navMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="our-story.html">Our Story</a></li>
-      <li><a href="collections.html#Trending">Trending</a></li>
-      <li><a href="collections.html#Scarf">Scarf</a></li>
-      <li><a href="collections.html#Abaya">Abaya</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
-
-  <!-- Header Section -->
-  <!-- Logo + tagline -->
-<div class="logo-tagline">
-    <img src="logo.png" alt="House of Nad Logo" class="logo">
-   <h2 class="tagline">
-  House of Nad<br>
-  <span>Elegance Redefined</span>
-</h2>
-</div>
-
+  </header>
   <!-- Order Tracking Section -->
   <section id="track-order" class="section">
     <h2>Track Your Order</h2>
@@ -111,6 +104,7 @@
 
 </body>
 </html>
+
 
 
 
