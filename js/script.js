@@ -15,17 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   productCards.forEach(card => observer.observe(card));
 
-  // Add to cart interaction
-  document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', () => {
-      const product = button.getAttribute('data-product');
-      alert(`${product} has been added to your cart!`);
+  // Add to cart interaction (for forms and buttons)
+  document.querySelectorAll('.add-to-cart, form[action*="add_to_cart"]').forEach(el => {
+    el.addEventListener('submit', e => {
+      if (el.tagName.toLowerCase() === 'form') {
+        e.preventDefault();
+        alert('Item has been added to your cart!');
+        el.submit();
+      }
     });
+    if (el.tagName.toLowerCase() === 'button') {
+      el.addEventListener('click', () => {
+        const product = el.getAttribute('data-product') || 'Product';
+        alert(`${product} has been added to your cart!`);
+      });
+    }
   });
 
   // Menu toggle for mobile
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('nav ul');
+  const menuToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.getElementById('navMenu');
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
@@ -33,32 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Package tracking (if applicable)
-  const trackForm = document.getElementById('track-form');
-  const trackResult = document.getElementById('track-result');
+  // Order tracking form (matching current HTML)
+  const trackOrderForm = document.querySelector('#track-order form');
 
-  if (trackForm && trackResult) {
-    trackForm.addEventListener('submit', e => {
+  if (trackOrderForm) {
+    trackOrderForm.addEventListener('submit', e => {
       e.preventDefault();
-      const trackingId = document.getElementById('tracking-id').value;
-      setTimeout(() => {
-        trackResult.textContent = `Package ${trackingId} is in transit.`;
-      }, 1000);
-    });
-  }
-
-  // Feedback submission
-  const feedbackForm = document.getElementById('feedback-form');
-  const feedbackMessage = document.getElementById('feedback-message');
-
-  if (feedbackForm && feedbackMessage) {
-    feedbackForm.addEventListener('submit', e => {
-      e.preventDefault();
-      setTimeout(() => {
-        feedbackMessage.textContent = 'Thank you for your feedback!';
-        feedbackMessage.classList.add('success');
-        feedbackForm.reset();
-      }, 800);
+      const orderId = trackOrderForm.querySelector('input[name="order_id"]').value;
+      alert(`Tracking order ${orderId}...`);
+      // You can replace alert with an actual fetch request to your PHP backend
     });
   }
 });
