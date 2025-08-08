@@ -5,28 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>House of Nad Fashion</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("active");
+    }
+  </script>
 </head>
 <body>
-  <header>
-    <div class="branding">
-      <img src="logo.png" alt="House of Nad Logo" class="logo">
-      <div class="title-text">
-        <h1 class="site-title">House of Nad</h1>
-        <p class="tagline">Elegance Redefined</p>
-      </div>
+
+  <!-- Header with logo + tagline -->
+  <header class="header">
+    <img src="logo.png" alt="House of Nad Logo" class="logo">
+    <div class="tagline">
+      House of Nad
+      <span>Elegance Redefined</span>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Trending</a></li>
-        <li><a href="#">Abaya</a></li>
-        <li><a href="#">Scarf</a></li>
-      </ul>
-    </nav>
   </header>
-</body>
-</html>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="collections.html#Trending">Trending</a></li>
+      <li><a href="collections.html#Abaya">Abaya</a></li>
+      <li><a href="collections.html#Scarf">Scarf</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
   <!-- Order Tracking Section -->
   <section id="track-order" class="section">
     <h2>Track Your Order</h2>
@@ -56,15 +64,15 @@
         <button type="submit">Add to Cart</button>
       </form>
     </div>
-    <<section class="products section">
+
     <div class="product-card">
       <img src="05.jpg" alt="Elegant Gown" />
       <h3>Elegant Gown</h3>
       <p class="price">₦15,000</p>
       <p class="desc">A timeless piece for your wardrobe. Perfect for formal occasions.</p>
       <button class="sold-out" disabled>Sold Out</button>
-    </div>!
-      <section class="products section">
+    </div>
+
     <div class="product-card">
       <img src="06.jpg" alt="Elegant Gown" />
       <h3>Elegant Gown</h3>
@@ -72,7 +80,7 @@
       <p class="desc">A timeless piece for your wardrobe. Perfect for formal occasions.</p>
       <button class="sold-out" disabled>Sold Out</button>
     </div>
-        <section class="products section">
+
     <div class="product-card">
       <img src="07.jpg" alt="Elegant Gown" />
       <h3>Elegant Gown</h3>
@@ -80,7 +88,7 @@
       <p class="desc">A timeless piece for your wardrobe. Perfect for formal occasions.</p>
       <button class="sold-out" disabled>Sold Out</button>
     </div>
-          <section class="products section">
+
     <div class="product-card">
       <img src="08.jpg" alt="Elegant Gown" />
       <h3>Elegant Gown</h3>
@@ -103,13 +111,4 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
